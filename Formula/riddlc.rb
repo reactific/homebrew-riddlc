@@ -6,10 +6,13 @@ class Riddlc < Formula
   license "Apache-2.0"
 
   depends_on "openjdk"
-
   def install
     inreplace "bin/riddlc", "/../lib", "/../libexec"
     libexec.install Dir["lib/*"]
     bin.install "bin/riddlc"
+  end
+
+  test do
+    assert_match "#{version}", shell_output("#{bin}/riddlc version")
   end
 end

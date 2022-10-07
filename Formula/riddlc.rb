@@ -13,6 +13,6 @@ class Riddlc < Formula
   end
 
   test do
-    assert_match version, shell_output("#{bin}/riddlc version")
+    assert_match version, shell_output("#{bin}/riddlc version").strip
   end
 end

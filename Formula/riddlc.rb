@@ -8,7 +8,8 @@ class Riddlc < Formula
   depends_on "openjdk"
 
   def install
-    lib.install Dir["lib/*"]
+    inreplace "bin/riddlc", "/../lib", "/../libexec"
+    libexec.install Dir["lib/*"]
     bin.install "bin/riddlc"
   end
 end

@@ -1,4 +1,3 @@
-
 class Riddlc < Formula
   desc "RIDDL is a language and toolset for specifying a system design"
   homepage "https://riddl.tech/"
